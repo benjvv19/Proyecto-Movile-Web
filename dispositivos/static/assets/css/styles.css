@@ -1,24 +1,186 @@
-/* static/dispositivos/styles/home.css */
+/* static/assets/css/styles.css */
+
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
+    background-color: #f4f4f4; /* Gris suave */
+    color: #333; /* Gris oscuro */
 }
 
+/* Header styles */
+header {
+    background-color: #2d6a4f; /* Verde oscuro */
+    padding: 20px;
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: center; /* Centramos todo el contenido horizontalmente */
+    align-items: center; /* Alineamos verticalmente los elementos */
+}
+
+.header-content {
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro de header-content */
+    align-items: center; /* Alinea verticalmente los elementos */
+    text-align: center; /* Asegura que el texto dentro de app-name esté centrado */
+}
+
+.logo {
+    width: 50px; /* Establecemos un tamaño adecuado para el logo */
+    height: 50px; /* Hacemos que el logo tenga una altura igual */
+    border-radius: 50%; /* Hace el logo redondo */
+    margin-right: 20px; /* Espacio entre el logo y el nombre */
+}
+
+.app-name {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Main content styling */
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 50px auto;
+    text-align: center;
+    padding-bottom: 80px;  /* Evita que el texto se corte por el footer */
+}
+
+h1,h2 {
+    font-size: 2em;
+    color: #2d6a4f; /* Verde oscuro */
     text-align: center;
 }
 
-h1 {
-    color: #777474;
-    font-size: 2.5em;
+.description, .why {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;  /* Justificamos el texto */
 }
 
-.device-type {
-    font-size: 1.5em;
-    color: #666;
+.highlight {
+    color: #2d6a4f; /* Resalta las palabras clave con verde */
+    font-weight: bold;
+}
+
+/* Footer styling */
+footer {
+    background-color: #2d6a4f; /* Verde oscuro */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+button {
+    background-color: #2d6a4f; /* Verde oscuro */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b4f34; /* Verde más oscuro */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header .logo {
+        max-width: 100px;
+    }
+
+    header .app-name {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .description, .why {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo {
+        max-width: 100px;
+    }
+
+    header .app-name {
+        font-size: 1.3em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+/* Estilo para la sección de descarga */
+.download {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.download h2 {
+    font-size: 2em;
+    color: #2d6a4f; /* Verde oscuro */
+    margin-bottom: 20px;
+}
+
+.download-button {
+    background-color: #2d6a4f; /* Verde oscuro */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #1b4f34; /* Verde más oscuro */
+}
+
+.qr-code {
+    width: 200px; /* Ajusta el tamaño del QR */
+    height: 200px;
+    margin-top: 20px;
 }

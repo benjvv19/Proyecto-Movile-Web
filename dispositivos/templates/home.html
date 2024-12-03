@@ -1,16 +1,91 @@
 {% load static %}
 
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/styles.css' %}">
+    <title>Student Revolution</title>
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/logo.png' %}">
 </head>
+
 <body>
+
+    <!-- Header with Logo and App Name -->
+    <header>
+        <div class="header-content">
+            <img src="{% static 'assets/img/logo.png' %}" alt="Logo de la Empresa" class="logo">
+            <h1 class="app-name">Student Revolution</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
     <div class="container">
-        <h1>Bienvenido a la página de inicio</h1>
-        <p class="device-type">Dispositivo detectado: {{ device_type }}</p>
+        <section class="description">
+            <h2>Descripción del Proyecto</h2>
+            <p>
+                "Student Revolution" es una aplicación móvil diseñada para mejorar el acceso y la compartición de
+                información entre estudiantes. A diferencia de plataformas tradicionales como AVA, que fragmentan los
+                foros por asignaturas, esta app centraliza todo en un solo lugar. Los usuarios pueden crear
+                publicaciones, comentar, guardar contenido y seguir a otros estudiantes, mientras que los
+                administradores moderan usuarios y gestionan el contenido para mantener el foro organizado.
+            </p>
+        </section>
+
+        <section class="why">
+            <h2>¿Por qué lo creamos?</h2>
+            <p>
+                El propósito de este proyecto es proporcionar a los estudiantes formas en las cuales pueden compartir
+                sus conocimientos y apuntes para facilitarles material extra el cual puedan ocupar para estudiar. Este
+                proyecto se realiza debido a que hemos visto que el foro de AVA se ve muy simple y está limitado a cada
+                asignatura, por lo cual uno debe navegar entre cada una de estas para acceder a ellos. Con esta
+                aplicación buscamos facilitar a los estudiantes acceder a la información que están buscando más
+                fácilmente.
+            </p>
+        </section>
+
+        <!-- Nueva Sección para Descargar la Aplicación -->
+        <section class="download">
+            <h2>Descarga la Aplicación Aquí</h2>
+            <div id="download-link">
+                <!-- Enlace de descarga por defecto (para móviles) -->
+                <a href="https://github.com/GiovanniGonzalezDuoc/ProyectoSemestralAPK/archive/refs/heads/master.zip" class="download-button" target="_blank">
+                    Descargar para Móvil
+                </a>
+            </div>
+            <div id="qr-code" style="display:none;">
+                <!-- Código QR para PC -->
+                <img src="{% static 'assets/img/qrcode.png' %}" alt="Código QR de la App" class="qr-code">
+            </div>
+        </section>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Student Revolution - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Detectar el tipo de dispositivo
+        function detectDevice() {
+            var isMobile = /Mobi|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                // Si es un dispositivo móvil, mostrar el enlace de descarga
+                document.getElementById('download-link').style.display = 'block';
+                document.getElementById('qr-code').style.display = 'none';
+            } else {
+                // Si es un PC, mostrar el código QR
+                document.getElementById('download-link').style.display = 'none';
+                document.getElementById('qr-code').style.display = 'block';
+            }
+        }
+
+        // Ejecutar la detección de dispositivo al cargar la página
+        window.onload = detectDevice;
+    </script>
+
 </body>
+
 </html>
