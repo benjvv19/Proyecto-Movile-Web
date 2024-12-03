@@ -15,7 +15,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #2d6a4f; /* Verde oscuro */
+    background-color: #000000; /* Verde oscuro */
     padding: 20px;
     display: flex; /* Usamos flexbox para alinear los elementos */
     justify-content: center; /* Centramos todo el contenido horizontalmente */
@@ -30,8 +30,8 @@ header {
 }
 
 .logo {
-    width: 50px; /* Establecemos un tamaño adecuado para el logo */
-    height: 50px; /* Hacemos que el logo tenga una altura igual */
+    width: 150px; /* Establecemos un tamaño adecuado para el logo */
+    height: 150px; /* Hacemos que el logo tenga una altura igual */
     border-radius: 50%; /* Hace el logo redondo */
     margin-right: 20px; /* Espacio entre el logo y el nombre */
 }
@@ -52,7 +52,7 @@ header {
 
 h1,h2 {
     font-size: 2em;
-    color: #2d6a4f; /* Verde oscuro */
+    color: #000000; /* Verde oscuro */
     text-align: center;
 }
 
@@ -64,13 +64,13 @@ h1,h2 {
 }
 
 .highlight {
-    color: #2d6a4f; /* Resalta las palabras clave con verde */
+    color: #000000; /* Resalta las palabras clave con verde */
     font-weight: bold;
 }
 
 /* Footer styling */
 footer {
-    background-color: #2d6a4f; /* Verde oscuro */
+    background-color: #000000; /* Verde oscuro */
     color: white;
     padding: 10px;
     text-align: center;
@@ -84,7 +84,7 @@ footer p {
 }
 
 button {
-    background-color: #2d6a4f; /* Verde oscuro */
+    background-color: #000000; 
     color: white;
     padding: 15px 30px;
     border: none;
@@ -95,10 +95,9 @@ button {
 }
 
 button:hover {
-    background-color: #1b4f34; /* Verde más oscuro */
+    background-color: #000000;
 }
 
-/* Estilos Responsivos */
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -159,12 +158,12 @@ button:hover {
 
 .download h2 {
     font-size: 2em;
-    color: #2d6a4f; /* Verde oscuro */
+    color: #000000; /* Verde oscuro */
     margin-bottom: 20px;
 }
 
 .download-button {
-    background-color: #2d6a4f; /* Verde oscuro */
+    background-color: #000000; /* Verde oscuro */
     color: white;
     padding: 15px 30px;
     border: none;
